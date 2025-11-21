@@ -12,7 +12,7 @@ def promedios(archivo, columna):
 def desviacion(archivo, columna):  
     try: 
         df = pd.read_csv(archivo)
-        return df['columna'].std()
+        return df[columna].std()
     except Exception as e:
         print("Error al procesar la columna:", e)
         return None
